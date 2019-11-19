@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style type="text/css">
+      grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 1.6fr 0.7fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". image topic-name ." ". . . ." ". . . .";
+}
+
+
+.image { grid-area: image; }
+
+.topic-name { grid-area: topic-name; }
+
+    </style>
+  </head>
+  <body>
+        <div class="grid-container">
+                <div class="image">hello</div>
+                <div class="topic-name">world</div>
+        </div>
+  </body>
+</html>

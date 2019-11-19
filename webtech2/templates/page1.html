@@ -1,0 +1,115 @@
+{% extends 'home.html' %}
+{% block head %}
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="/static/css/main.css">
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script>
+    var hashChanged = function(hashlink) {
+        // update table when url fragment changes
+
+        // strip leading hash
+        var tag = hashlink.substring(1);
+
+        if (tag === "") {
+            // show all links
+            $('tr').show();
+        } else {
+            // show only links from given category
+            $('tr').hide();
+            $('.' + tag).show();	
+        }
+    }
+
+    // supported in nearly all modern browsers
+    window.onhashchange = function () {
+        hashChanged(window.location.hash);
+    }
+</script>
+{% endblock %}
+{% block body %}
+<header class="header-section">
+    <a href="home.html" class="site-logo">
+        <img src="/static/images/logo.png" alt="" width="80" height="60">
+    </a>
+    <ul class="main-menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="signup/index.html">Sign Up</a></li>
+
+        <li class="header-right">
+            <div class="hr-box">
+                <img src="/static/images/location-icon.png" alt="">
+                <h6>PES University, Bangalore</h6>
+            </div>
+        </li>
+    </ul>
+</header>
+<div class="head-row">
+    <div class="head-col" style="background-color: #008787;">
+        <div class="head-image" style="align-content: center;">
+            <img class="img1" src="/static/images/icons/env1.jpeg" alt="" height="200" style="border-radius: 40px;">
+        </div>
+    </div>
+    <div class="head-col">
+        <div class="topic-name">Environment<br /><p style="font-size:30px;color:#505050;">The world around us</p></div>
+        
+    </div>
+</div>
+
+<div class = "row1">
+<div class="column1">
+    <div class = "hold-image">
+        <img class="img-response" src="/static/images/icons/climatechange.jpeg" alt="">
+    </div>
+    <div class="item-name">Climate Change</div>
+</div>
+
+<div class="column1">
+        <div class = "hold-image">
+            <img class="img-response" src="/static/images/icons/ecosystem.png" alt="">
+        </div>
+        <div class="item-name">Ecosystem</div>
+</div>
+</div>
+
+<div class = "row1">
+    <div class="column1">
+            <div class = "hold-image">
+                <img class="img-response" src="/static/images/icons/disasters.jpeg" alt="">
+            </div>
+            <div class="item-name">Environmetal Disasters</div>
+    </div>
+
+<div class="column1">
+        <div class = "hold-image">
+            <img class="img-response" src="/static/images/icons/download.png" alt="">
+        </div>
+        <div class="item-name">Wildlife</div>
+</div>       
+</div>
+
+
+
+<!--rss feeds  -->
+<h1>RSS Customization: Reddit's Home Page</h1>
+
+<table class="pure-table">
+    <thead>
+        <tr>
+            <th>Indico Tag</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    	{% for entry in entries %}
+    	  <tr class="{{ entry.tag }}">
+    	  	<td><a href="#{{ entry.tag }}" class="tag">{{ entry.tag }}</a></td>
+    	  	<td><a href="{{ entry.link }}">{{ entry.title }}</a></td>
+    	  </tr>
+    	{% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

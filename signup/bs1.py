@@ -19,10 +19,13 @@ def videos():
 	vids = soup.findAll('a',attrs={'class':'yt-uix-tile-link'})
 	print(vids)
 	videolist=[]
+	c = 0
 	for v in vids:
-		tmp = 'https://www.youtube.com' + v['href']
-		tmp = tmp.replace("watch?v=", "embed/")
-		videolist.append(tmp)
+		if(c<=6):
+			tmp = 'https://www.youtube.com' + v['href']
+			tmp = tmp.replace("watch?v=", "embed/")
+			videolist.append(tmp)
+			c = c+1
 	return render_template("tempvid.html",video1 = videolist)
 	
 if __name__ == '__main__':

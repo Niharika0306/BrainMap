@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="/static/css/slicknav.min.css"/>
 
 	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="static/css/style.css"/>
+	<link rel="stylesheet" href="/static/css/style.css"/>
 
 
 	
@@ -59,15 +59,24 @@
 		<div class="container" >
 			<div class="hero-text" >
 				<!--<h2>Physical activity</h2>-->
-				<h2 style="color: #626465;">Image Processing    </h2>
+				<h2 style="color: #626465;">{{ topicName }}   </h2>
 			</div>
 		</div>
 	</section>
 	
 	<div>
         <div>
-
+				
         </div>
+    </div>
+
+    <div>
+    	{% for v in video1 %}
+					<iframe height="560" width="610"  
+					src= "{{ v }}" >
+					</iframe>
+	
+				{% endfor %} 
     </div>
 
 	<!-- Footer section -->

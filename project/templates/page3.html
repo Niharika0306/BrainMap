@@ -55,89 +55,20 @@
 	<!-- Header section end -->
 
 	<!-- Hero section -->
-	<section class="hero-section set-bg" data-setbg="/static/img/header.png" style="background-color:black;>
-		<div class="container">
-			<div class="hero-text">
+	<section class="hero-section set-bg"  style="background-color:#d6eaf8;">
+		<div class="container" >
+			<div class="hero-text" >
 				<!--<h2>Physical activity</h2>-->
-				<h2 >A Universe of Learning!</h2>
-				<a href="login/index.html" class="site-btn">Login</a>
+				<h2 style="color: #626465;">Image Processing    </h2>
 			</div>
 		</div>
 	</section>
 	
-	<section class="trainers-section">
-		<div class="container">
-			<!--<div class="section-title text-center">
-				<h2>The Topics</h2>
-			</div>-->
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic" style="background-color:#00cccc";>
-							 <a href="space.html"> 
-							<img src="/static/img/trainers/spacelogo.png" alt="Space">
-							</a>
-						</div>
-						<h4>Space</h4>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic" style="background-color:#00cccc";>
-							<a href="{{ url_for('tech') }}">
-							<img src="/static/img/trainers/tech2.png" alt="">
-							</a>
-						</div>
-						<h4>Engineering and Tech</h4>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic" style="background-color:#00cccc";>
-							<a href="{{ url_for('envi') }}">
-							<img src="/static/img/trainers/env.png" alt="">
-                            </a>
-						</div>
-						<h4>Environment</h4>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic" style="background-color:#00cccc";>
-						<a href="health.html">
-							<img src="/static/img/trainers/health_care.png" alt="">
-							</a>
-						</div>
-						<h4>Healthcare</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Trainers section end -->
+	<div>
+        <div>
 
-	
-	<div style="margin-bottom: 2%;"></div>
-	<h3 style="color: #DA1D0A">RSS Customization: Reddit's Home Page</h3>
-
-<table class="pure-table">
-    <thead>
-        <tr>
-            <th>Indico Tag</th>
-            <th>Title</th>
-        </tr>
-    </thead>
-
-    <tbody>
-    	{% for entry in entries %}
-    	  <tr class="{{ entry.tag }}">
-    	  	<td><a href="#{{ entry.tag }}" class="tag">{{ entry.tag }}</a></td>
-    	  	<td><a href="{{ entry.link }}">{{ entry.title }}</a></td>
-    	  </tr>
-    	{% endfor %}
-    </tbody>
-</table>
-
+        </div>
+    </div>
 
 	<!-- Footer section -->
 	<footer class="footer-section set-bg" data-setbg="/static/img/space.png" style="opacity: 0.83">

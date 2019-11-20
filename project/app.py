@@ -90,25 +90,6 @@ def about_us():
 def contact():
 	return render_template('contact.html')
 
-'''
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-	error = None
-	if (request.method == "POST"):
-		username = request.form['username']
-		password = request.form['password']
-		print(username)
-		print(password)
-		#res = sql_query(''' ''')
-		for row in res:
-			u = row['Username']
-			p = row['Password']
-			if u==username:
-				if p==password:
-					print('logged in')
-					return redirect(url_for('main'))
-	
-'''
 
 
 
@@ -125,24 +106,6 @@ def log():
 @app.route('/signup/',methods=['GET','POST'])
 def signup():
 	# if(request.method=="POST"):
-	# 	name = request.form['name']
-	# 	username = request.form['username']
-	# 	emailid = request.form['email']
-	# 	password = request.form['password']
-	# 	checklist = request.form.getlist('preference')
-	# 	h = 0
-	# 	s = 0
-	# 	t= 0
-	# 	e = 0
-	# 	if 'envi' in checklist:
-	# 		e = 1
-	# 	if 'space' in checklist:
-	# 		s = 1
-	# 	if 'tech' in checklist:
-	# 		t = 1
-	# 	if 'health' in checklist:
-	# 		h = 1
-	# 	sql_insert(name,username,password,emailid,h,s,t,e)
 	return render_template('signup.html')
 
 
@@ -168,6 +131,19 @@ def signed_in():
 			h = 1
 		sql_insert(name,username,password,emailid,h,s,t,e)
 	return render_template('index.html')
+
+@app.route('/tech')
+def tech():
+	return render_template('tech.html')
+
+@app.route('/envi')
+def envi():
+	return render_template('envi.html')
+
+
+@app.route('/page3')
+def page3():
+	return render_template('page3.html')
 
 if __name__ == '__main__':
     app.run()

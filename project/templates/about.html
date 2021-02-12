@@ -1,0 +1,140 @@
+{% extends 'home.html' %}
+
+{% block body %}
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<a href="{{ url_for('main') }}" class="site-logo">
+			<img src="/static/img/logo.png" alt="" width="80" height="60">
+		</a>
+		<ul class="main-menu">
+			<li><a class="active" href="{{ url_for('main') }}">Home</a></li>
+			<li><a href="{{ url_for('about_us') }}">About Us</a></li>
+			<li><a href="{{ url_for('contact') }}">Contact</a></li>
+			<li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+
+			<li class="header-right">
+				<div class="hr-box">
+					<img src="/static/img/location-icon.png" alt="">
+					<h6>PES University, Bangalore</h6>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<div class="clearfix"></div>
+
+	<!-- Page top section -->
+	<section class="page-top-section set-bg" data-setbg="/static/img/header.png" style="background-color: black">
+		<div class="container">
+			<h2>About us</h2>
+		</div>
+	</section>
+	<!-- Page top section end -->
+
+	<!-- About section -->
+	<section class="about-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-5">
+					<div class="section-title text-center">
+						<h2>The world is yours to explore</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="about-text">
+						<p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula frin-gilla ut vitae orci. Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobor-tis a enim eget tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="about-text">
+						<p>Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, onec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci. Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="about-img">
+						<img src="/static/img/about-img.png" alt="">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- About section end -->
+
+	
+	<!-- Footer section -->
+	<!-- Footer section -->
+	<footer class="footer-section set-bg" data-setbg="/static/img/space.png" style="opacity: 0.83">
+		<div class="container" >
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Location</h4>
+						<div class="fw-info-box">
+							<img src="/static/img/icons/1.png" alt="">
+							<div class="fw-info-text">
+								<p>PES University, Bangalore</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Subscriptions</h4>
+						<div class="fw-info-box">
+							<img src="/static/img/icons/2.png" alt="">
+							<div class="fw-info-text">
+								<p>+91 9087654321</p>
+								<p>+91 1234567890</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>E-mail</h4>
+						<div class="fw-info-box">
+							<img src="/static/img/icons/3.png" alt="">
+							<div class="fw-info-text">
+								<p>brainmap@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Social Media</h4>
+						<div class="fw-info-box">
+							<img src="/static/img/icons/4.png" alt="">
+							<div class="social-links">
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 order-2 order-md-1">
+					
+				</div>
+				<div class="col-md-6 order-1 order-md-2">
+					<ul class="footer-menu">
+						<li><a href="{{ url_for('about_us') }}">About Us</a></li>
+						<li><a href="{{ url_for('contact') }}">Contact</a></li>
+						<li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+{% endblock %}
